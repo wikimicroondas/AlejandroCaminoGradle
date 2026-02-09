@@ -25,8 +25,6 @@ public class Main {
         // Interacción 2
         history.add(new UserMessage("¿Recuerdas cómo me llamo?"));
 
-
-
         respuesta = model.chat(history).aiMessage();
         history.add(respuesta);
         System.out.println(respuesta.text());
