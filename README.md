@@ -1,7 +1,8 @@
+# Gradle
 ### Introducción
 Segunda parte de un ejercicio centrado en builders de Java.
 ### Descripción
-En este bloque vamos a desarrollar un programa en Java que genere una conversación entre 2 LLMs. Dado que el uso de los servicios que vamos a utilizar es muy limitado de forma gratuita, la conversación se reducirá a que una IA hace una pregunta y la otra responde. Para ello vamos a utilizar Ollama y para facilitar el acceso a las IA desde Java, utilizaremos la librería LangChain4j.
+En este bloque vamos a desarrollar un programa en Java que genere una conversación entre 2 LLMs `gemma:2b`. Dado que el uso de los servicios que vamos a utilizar es muy limitado de forma gratuita, la conversación se reducirá a que una IA hace una pregunta y la otra responde. Para ello vamos a utilizar Ollama y para facilitar el acceso a las IA desde Java, utilizaremos la librería LangChain4j.
 
 <p align="center">
 	<img src="https://gradle.org/assets/images/gradle-knowledge-graph-logo.png" width="100" alt="Maven logo" >
@@ -13,4 +14,23 @@ En este bloque vamos a desarrollar un programa en Java que genere una conversaci
 ```kotlin
 implementation(platform("dev.langchain4j:langchain4j-bom:1.10.0"))
 implementation("dev.langchain4j:langchain4j-open-ai")
+```
+
+### Comandos
+Ejecutar en la terminal
+
+```bash
+./gradlew run
+```
+Versión
+```bash
+ollama --version
+```
+Lista de modelos cargados
+```bash
+ollama ps
+```
+Dependencia de tareas
+```bash
+./gradlew llmInfo
 ```

@@ -19,11 +19,11 @@ public class Main {
                 .build();
         List<ChatMessage> history = new ArrayList<>();
         // Interacción 1
-        history.add(new UserMessage("Hola, soy Germán"));
+        history.add(new UserMessage("Sitúa políticamente el arte moderno ¿Cuál es su foco principal?"));
         AiMessage respuesta = model.chat(history).aiMessage();
         history.add(respuesta);
         // Interacción 2
-        history.add(new UserMessage("¿Recuerdas cómo me llamo?"));
+        history.add(new UserMessage("Justifica tu respuesta"));
 
         respuesta = model.chat(history).aiMessage();
         history.add(respuesta);
