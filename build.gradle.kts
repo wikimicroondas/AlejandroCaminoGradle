@@ -25,3 +25,31 @@ tasks.test {
 application {
     mainClass.set("com.alejandrocamino.tema4gradle.Main")
 }
+
+// ¿Está Ollama vivo?
+tasks.register<Exec>("ollamaVersion") {
+    group = "ollama custom"
+    description = "Muestra la versión instalada de Ollama"
+
+    commandLine("ollama", "--version")
+}
+
+// 2. ¿Hay modelos cargados?
+tasks.register<Exec>("ollamaPs") {
+    group = "ollama custom"
+    description = "Muestra los modelos de Ollama cargados en memoria"
+
+    commandLine("ollama", "ps")
+}
+
+// 3. Dependencias entre tareas
+tasks.register("llmInfo") {
+    group = "ollama custom"
+    description = "Ejecuta todas las comprobaciones de Ollama"
+
+    dependsOn("ollamaVersion", "ollamaPs")
+
+    doLast {
+        println("Demo finalizada")
+    }
+}

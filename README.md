@@ -6,6 +6,7 @@ En este bloque vamos a desarrollar un programa en Java que genere una conversaci
 <p align="center">
 	<img src="https://gradle.org/assets/images/gradle-knowledge-graph-logo.png" width="100" alt="Maven logo" >
 </p>
+
 ### Dependencias
 - **LangChain4j**
 
