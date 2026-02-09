@@ -8,6 +8,8 @@ En este bloque vamos a desarrollar un programa en Java que genere una conversaci
 </p>
 ### Dependencias
 - **LangChain4j**
+
 ```kotlin
-implementation(platform("dev.langchain4j:langchain4j-bom:1.10.0")) implementation("dev.langchain4j:langchain4j-open-ai")
+implementation(platform("dev.langchain4j:langchain4j-bom:1.10.0"))
+implementation("dev.langchain4j:langchain4j-open-ai")
 ```
